@@ -1,0 +1,184 @@
+body,
+input {
+  color: #01ff01;
+  background: #121010;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body *:focus,
+input *:focus {
+  outline: none;
+}
+
+body *,
+input * {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.visible {
+  display: block;
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.line {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.ib {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.cursor,
+.turn {
+  display: inline-block;
+  width: 1rem;
+  height: 2.3rem;
+  background: #34ff34;
+}
+
+.turn {
+  margin-right: 0.5rem;
+}
+
+.cursor {
+  -webkit-animation: blink 0.8s infinite;
+  animation: blink 0.8s infinite;
+}
+
+.screen {
+  position: relative;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.crt {
+  overflow: hidden;
+  margin-top: 10px;
+  font-size: 0;
+}
+
+.crt::before,
+.crt::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.crt::before {
+  background: -webkit-linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), -webkit-linear-gradient(left, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.line-wrapper,
+.guess-input-wrapper,
+.guess-output-wrapper,
+.words-opts-wrapper {
+  margin: 0 auto;
+  padding: 2rem 0;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.attempts {
+  position: absolute;
+  top: 11rem;
+  left: 21rem;
+  display: inline-block;
+  min-width: 15rem;
+  height: 3rem;
+}
+
+.words-opts-wrapper {
+  width: 44rem;
+  font-size: 0;
+}
+
+.memory-col {
+  margin-top: 5rem;
+}
+
+.memory-col span {
+  display: inline-block;
+  width: 22rem;
+}
+
+.guess-input-wrapper {
+  margin-top: -5rem;
+}
+
+.guess-input-wrapper input {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  box-shadow: none;
+  background: none;
+  opacity: 0;
+}
+
+.guess-input-wrapper .input-mask {
+  display: inline-block;
+}
+
+.guess-input-wrapper .cursor {
+  display: inline-block;
+}
+
+@-webkit-keyframes blink {
+  from {
+    background: #34ff34;
+  }
+  to {
+    background: black;
+  }
+}
+
+@keyframes blink {
+  from {
+    background: #34ff34;
+  }
+  to {
+    background: black;
+  }
+}
+
+.const {
+  color: #cc99ff;
+}
+
+.require{
+  color: #3366ff;
+}
+
+.string{
+  color: #99cc00;
+}
