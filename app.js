@@ -20,7 +20,7 @@ $.fn.typewriter = function () {
         }
       }
       c.html(b.substring(d, a++) + (a & 1 ? '<i class="cursor"> </i>' : ''))
-      a >= b.length || setTimeout(e, 70 + -100 *
+      a >= b.length || setTimeout(e, 40 + -100 *
         Math.random())
     }
     e()
